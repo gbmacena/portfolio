@@ -43,7 +43,7 @@ const Home = () => {
             fazem a diferença para pessoas e negócios.
           </motion.p>
           {/* botão */}
-          {/* <div className="flex justify-center xl:hidden relative z-50">
+          <div className="flex justify-center xl:hidden relative z-50">
             <ProjectsBtn />
           </div>
           <motion.div
@@ -54,7 +54,7 @@ const Home = () => {
             className="hidden xl:flex z-50"
           >
             <ProjectsBtn />
-          </motion.div> */}
+          </motion.div>
         </div>
       </div>
       {/* imagem */}
@@ -70,7 +70,7 @@ const Home = () => {
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[737px] max-h-[623px] absolute -bottom-32 lg:bottom-0 lg:right-[10%]"
+          className="w-full h-full max-w-[630px] max-h-[623px] absolute -bottom-24 lg:bottom-0 lg:right-[15%]"
         >
           <Avatar />
         </motion.div>

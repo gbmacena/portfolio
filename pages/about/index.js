@@ -151,7 +151,6 @@ import CountUp from "react-countup";
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  console.log(index);
   return (
     <div className="md:overflow-visible overflow-auto h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
@@ -209,7 +208,7 @@ const About = () => {
               {/* clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={15} duration={5} /> +
+                  <CountUp start={0} end={15} duration={8} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Cursos concluídos
@@ -218,7 +217,7 @@ const About = () => {
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={8} /> +
+                  <CountUp start={0} end={10} duration={10} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Projetos finalizados

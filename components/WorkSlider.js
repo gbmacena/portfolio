@@ -28,11 +28,6 @@ export const workSlider = {
     {
       images: [
         {
-          title: "Gesso",
-          path: "/gesso.png",
-          url: "https://github.com/gbmacena/Gesso",
-        },
-        {
           title: "Forum",
           path: "/forum.png",
           url: "https://github.com/gbmacena/Forum",
