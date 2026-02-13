@@ -1,4 +1,3 @@
-// icons
 import {
   HiHome,
   HiUser,
@@ -38,8 +37,9 @@ const Nav = () => {
             <Link
               className={`${
                 link.path === pathname && "text-accent"
-              } relative flex items-center group hover:text-accent transition-all duration-300`}
+              } relative flex items-center group hover:text-accent transition-all duration-300 focus:outline-none`}
               href={link.path}
+              onClick={(e) => e.target.blur()}
               key={index}
             >
               {/* tooltip */}

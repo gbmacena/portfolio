@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// icons
 import {
   FaHtml5,
   FaCss3,
@@ -29,7 +28,6 @@ import {
   SiRedux,
 } from "react-icons/si";
 
-//  about data
 export const aboutData = [
   {
     title: "habilidades",
@@ -90,7 +88,7 @@ export const aboutData = [
       },
       {
         title: "Instrutor de Programação",
-        stage: "2025 - atualmente",
+        stage: "2025",
       },
     ],
   },
@@ -99,17 +97,10 @@ export const aboutData = [
     info: [
       {
         title:
-          "Tecnólogo em Análise e Desenvolvimento de Sistemas - Centro Universitário de João Pessoa - UNIPÊ",
-        stage: "2024 - 2025 (conclusão prevista)",
+          "Análise e Desenvolvimento de Sistemas - Centro Universitário de João Pessoa - UNIPÊ",
+        stage: "2024 - 2025",
       },
-      {
-        title: "Curso Full Stack JavaScript - One Bit Code",
-        stage: "2023 - 2024",
-      },
-      {
-        title: "Curso TypeScript - One Bit Code",
-        stage: "2024",
-      },
+
       {
         title: "Curso de Next.js - Udemy",
         stage: "2025",
@@ -123,9 +114,14 @@ export const aboutData = [
         stage: "2025",
       },
       {
-        title: "Curso Tailwind - One Bit Code",
+        title: "Curso TypeScript - One Bit Code",
         stage: "2024",
       },
+      {
+        title: "Curso Full Stack JavaScript - One Bit Code",
+        stage: "2023 - 2024",
+      },
+
       {
         title: "Rocketseat Discover",
         stage: "2023",
@@ -138,41 +134,39 @@ export const aboutData = [
   },
 ];
 
-// components
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 
-// framer motion
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
-// counter
 import CountUp from "react-countup";
 
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="md:overflow-visible overflow-auto h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="md:overflow-visible overflow-auto h-full bg-primary/30 py-32 text-center xl:text-left pb-44">
       <Circles />
       {/* avatar img */}
       <motion.div
-        variants={fadeIn("right", 0.2)}
+        key="about-avatar"
+        variants={fadeIn("up", 0.8)}
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+        className="hidden xl:flex w-full max-w-[750px] max-h-[750px] absolute left-[-350px] bottom-0"
       >
-        <Avatar />
+        <Avatar className="w-[750px] h-[750px] scale-x-[-1] object-bottom" />
       </motion.div>
-      <div className="container mx-auto  flex flex-col items-center xl:flex-row gap-x-6 h-[100vh]">
+      <div className="container justify-center mx-auto px-4 flex flex-col items-center xl:flex-row gap-x-6 min-h-[100vh]">
         {/* text */}
-        <div className="flex-1 flex flex-col justify-center z-50">
+        <div className=" flex flex-col z-50 justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2"
+            className="h2 mb-4"
           >
             Sobre <span className="text-accent">mim</span>
           </motion.h2>
@@ -199,16 +193,30 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={4} duration={5} /> +
+                  <CountUp
+                    start={0}
+                    end={4}
+                    duration={10}
+                    enableScrollSpy={true}
+                    scrollSpyOnce={true}
+                  />{" "}
+                  +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Anos de experiência
                 </div>
               </div>
-              {/* clients */}
+              {/* courses */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={15} duration={8} /> +
+                  <CountUp
+                    start={0}
+                    end={15}
+                    duration={8}
+                    enableScrollSpy={true}
+                    scrollSpyOnce={true}
+                  />{" "}
+                  +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Cursos concluídos
@@ -217,7 +225,14 @@ const About = () => {
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={10} /> +
+                  <CountUp
+                    start={0}
+                    end={10}
+                    duration={8}
+                    enableScrollSpy={true}
+                    scrollSpyOnce={true}
+                  />{" "}
+                  +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Projetos finalizados
@@ -226,7 +241,13 @@ const About = () => {
               {/* awards */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={1} duration={5} />
+                  <CountUp
+                    start={0}
+                    end={1}
+                    duration={5}
+                    enableScrollSpy={true}
+                    scrollSpyOnce={true}
+                  />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Hackathons vencidos
@@ -241,7 +262,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex xl:mt-40 flex-col w-full xl:max-w-[48%] h-[480px]"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
@@ -270,11 +291,14 @@ const About = () => {
                   <div className="font-light mb-2 md:mb-0">{item.title}</div>
                   {/* <div className="hidden md:flex">-</div> */}
                   <div>{item.stage}</div>
-                  <div className="flex gap-x-4">
+                  <div className="flex flex-wrap gap-2 justify-center xl:justify-start lg:gap-4">
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex) => {
                       return (
-                        <div key={itemIndex} className="text-2xl text-white">
+                        <div
+                          key={itemIndex}
+                          className="text-xl sm:text-2xl text-white"
+                        >
                           {icon}
                         </div>
                       );

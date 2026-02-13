@@ -1,7 +1,5 @@
-// next image
 import Link from "next/link";
 
-// components
 import Socials from "../components/Socials";
 
 const Header = () => {
@@ -11,7 +9,7 @@ const Header = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
           {/* logo substituído por texto */}
           <Link href={"/"}>
-            <h1 className="text-2xl font-sora">
+            <h1 className="text-2xl font-sora whitespace-nowrap">
               <span className="font-bold">Gabriel</span> Macena
               <span className="text-accent">.</span>
             </h1>

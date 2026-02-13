@@ -1,15 +1,11 @@
-// next image
 import Image from "next/image";
 
-// components
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
 
-// framer motion
 import { motion } from "framer-motion";
 
-// variants
 import { fadeIn } from "../variants";
 
 const Home = () => {
@@ -20,7 +16,7 @@ const Home = () => {
         <div className="z-10 text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* título */}
           <motion.h1
-            variants={fadeIn("down", 0.2)}
+            variants={fadeIn("down", 0.1)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -32,7 +28,7 @@ const Home = () => {
           </motion.h1>
           {/* subtítulo */}
           <motion.p
-            variants={fadeIn("down", 0.3)}
+            variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -47,7 +43,7 @@ const Home = () => {
             <ProjectsBtn />
           </div>
           <motion.div
-            variants={fadeIn("down", 0.5)}
+            variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -65,12 +61,11 @@ const Home = () => {
         <ParticlesContainer />
         {/* avatar */}
         <motion.div
-          variants={fadeIn("up", 0.5)}
+          variants={fadeIn("up", 0.4)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-full h-full max-w-[630px] max-h-[623px] absolute -bottom-24 lg:bottom-0 lg:right-[15%]"
+          className="w-full h-full max-w-[750px] max-h-[750px] absolute bottom-0 lg:bottom-0 lg:right-[0%]"
         >
           <Avatar />
         </motion.div>

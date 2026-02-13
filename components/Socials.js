@@ -1,7 +1,5 @@
-// links
 import Link from "next/link";
 
-// icons
 import {
   RiYoutubeLine,
   RiInstagramLine,

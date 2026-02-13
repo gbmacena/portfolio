@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  outline: none !important;
+}
+
 .translate-z-0 {
   transform: translateZ(0px);
 }
@@ -47,5 +51,10 @@
   }
   .textarea {
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
+  }
+
+  /* tech-badge: only turn accent when BOTH project (.group) and the badge are hovered */
+  .group:hover .tech-badge:hover {
+    @apply text-accent;
   }
 }
