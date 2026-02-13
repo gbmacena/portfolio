@@ -195,13 +195,12 @@ import {
   SiExpress,
   SiNestjs,
 } from "react-icons/si";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import useWorkSliderStore from "../stores/workSliderStore";
 
 const WorkSlider = () => {
-  const { activeSlide, setActiveSlide } = useWorkSliderStore();
+  const [activeSlide, setActiveSlide] = useState(0);
   const allProjects = workSlider.slides.flatMap((slide) => slide.images);
 
   return (
