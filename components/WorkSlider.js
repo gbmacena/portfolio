@@ -198,8 +198,10 @@ import {
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import useWorkSliderStore from "../stores/workSliderStore";
 
 const WorkSlider = () => {
+  const { activeSlide, setActiveSlide } = useWorkSliderStore();
   const allProjects = workSlider.slides.flatMap((slide) => slide.images);
 
   return (
@@ -213,6 +215,8 @@ const WorkSlider = () => {
           }}
           modules={[Pagination]}
           className="h-[280px]"
+          initialSlide={activeSlide}
+          onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
         >
           {allProjects.map((image, index) => (
             <SwiperSlide key={`mobile-${index}`}>
@@ -313,6 +317,8 @@ const WorkSlider = () => {
           }}
           modules={[Pagination]}
           className="h-[480px]"
+          initialSlide={activeSlide}
+          onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
         >
           {workSlider.slides.map((slide, index) => {
             return (
