@@ -233,16 +233,18 @@ const WorkSlider = () => {
 
                     <div className="absolute inset-0 flex flex-col items-center justify-center translate-y-full group-hover:translate-y-0 transition-all duration-300 px-4">
                       {/* título do projeto */}
-                      <h3 className="text-sm sm:text-base font-bold mb-2 text-white">
-                        {image.title}
-                      </h3>
+                      {/*
+                    <h3 className="text-sm sm:text-base font-bold mb-2 text-white">
+                      {image.title}
+                    </h3>
+                    */}
 
                       {/* tecnologias */}
                       <div className="flex flex-wrap gap-2 justify-center mb-3">
                         {image.tech?.map((tech, i) => (
                           <span
                             key={`m-${i}`}
-                            className="inline-flex items-center gap-2 px-2 py-1 text-xs font-semibold rounded-full bg-secondary/85 text-white ring-1 ring-white/10 drop-shadow-sm"
+                            className="inline-flex items-center gap-2 px-2 py-1 text-xs font-semibold rounded-full bg-transparent border border-white/10 text-white ring-0 drop-shadow-sm whitespace-nowrap tech-badge"
                           >
                             {typeof tech === "string" ? (
                               <>{tech}</>
@@ -337,16 +339,18 @@ const WorkSlider = () => {
 
                           <div className="absolute inset-0 flex flex-col items-center justify-center translate-y-full group-hover:translate-y-0 transition-all duration-300 px-4">
                             {/* título do projeto */}
-                            <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-2 text-white">
-                              {image.title}
-                            </h3>
+                            {/*
+                          <h3 className="text-sm sm:text-lg md:text-xl font-bold mb-2 text-white">
+                            {image.title}
+                          </h3>
+                          */}
 
                             {/* tecnologias */}
                             <div className="flex flex-wrap gap-2 justify-center mb-3 max-w-full">
                               {image.tech?.map((tech, i) => (
                                 <span
                                   key={i}
-                                  className="inline-flex items-center gap-2 px-2 py-1 text-xs font-semibold rounded-full bg-secondary/85 text-white ring-1 ring-white/10 drop-shadow-sm whitespace-nowrap"
+                                  className="inline-flex items-center gap-2 px-2 py-1 text-xs font-semibold rounded-full bg-transparent border border-white/10 text-white ring-0 drop-shadow-sm whitespace-nowrap"
                                 >
                                   {typeof tech === "string" ? (
                                     <>{tech}</>
