@@ -6,13 +6,21 @@ import { motion } from "framer-motion";
 
 import { fadeIn } from "../../variants";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });
+
+  useEffect(() => {
+    if (process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+      try {
+        emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+      } catch (err) {}
+    }
+  }, []);
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -28,11 +36,37 @@ const Contact = () => {
         throw new Error("Configurações do EmailJS não encontradas");
       }
 
-      const result = await emailjs.sendForm(
+      const formData = new FormData(form.current);
+      const templateParams = {
+        from_name: formData.get("user_name"),
+        email: formData.get("user_email"),
+        subject: formData.get("subject"),
+        message: formData.get("message"),
+        user_name: formData.get("user_name"),
+        user_email: formData.get("user_email"),
+        reply_to: formData.get("user_email"),
+        from_email: formData.get("user_email"),
+      };
+
+      if (
+        !templateParams.from_name ||
+        !templateParams.email ||
+        !templateParams.message
+      ) {
+        setStatus({
+          type: "error",
+          message:
+            "Nome, email e mensagem são obrigatórios — verifique se os campos foram preenchidos corretamente.",
+        });
+        setIsLoading(false);
+        return;
+      }
+
+      const result = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       );
 
       setStatus({
