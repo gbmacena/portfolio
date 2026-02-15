@@ -177,9 +177,9 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            Focado em desenvolver aplicações escaláveis e performáticas,
-            aplicando clean code e melhores práticas para garantir qualidade e
-            fácil manutenção.
+            Mais do que escrever código, estruturo soluções. Penso em
+            arquitetura, performance e evolução do produto desde o primeiro
+            commit.
           </motion.p>
           {/* counters */}
           <motion.div

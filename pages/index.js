@@ -34,9 +34,9 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Me chamo Gabriel Macena, sou desenvolvedor full stack. Gosto de
-            criar soluções digitais modernas, performáticas e que realmente
-            fazem a diferença para pessoas e negócios.
+            Desenvolvedor Full Stack focado em construir aplicações escaláveis,
+            rápidas e orientadas a resultado. Transformo problemas complexos em
+            soluções digitais simples e eficientes.
           </motion.p>
           {/* botão */}
           <div className="flex justify-center xl:hidden relative z-50">
