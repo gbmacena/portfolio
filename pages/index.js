@@ -36,7 +36,7 @@ const Home = () => {
           >
             Desenvolvedor Full Stack focado em construir aplicações escaláveis,
             rápidas e orientadas a resultado. Transformo problemas complexos em
-            soluções digitais simples e eficientes.
+            soluções digitais simples e eficientes. 
           </motion.p>
           {/* botão */}
           <div className="flex justify-center xl:hidden relative z-50">
