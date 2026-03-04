@@ -5,7 +5,7 @@ export const workSlider = {
         {
           title: "Carreira AI",
           path: "/carreiraAI.png.png",
-          liveUrl: "https://carreira-ia.vercel.app/",
+          liveUrl: null,
           githubUrl: "https://github.com/gbmacena/Carreira-IA",
           tech: [
             <SiTypescript
